@@ -1,0 +1,147 @@
+.filme{
+	border:6px solid #e6e6e6;
+	margin: 20px;
+	left:40%;
+	top:50px;
+	position:relative;
+	background:#1a1a1a;
+	opacity:0.9;
+	
+	}
+.caixa{
+	width:700px;
+	top:20px;
+	left:50%;
+	
+}
+
+.titulo{
+	font-family: Arial;
+	color:red;
+	font-size:1.5em;
+	text-align:center;
+	background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNY0Ds3caTw7MNxoBDI4qKmhRdadtlKZeMbmLIsZ3mVv7HtRVj");
+}
+.figura img{
+		
+	position:relative;
+	height:220px;
+	width:500px;
+	height:300px;
+	left:10%;
+	
+	
+}
+.resumo{
+background:#262626;
+text-align:center;
+font-size:1.2em;
+}
+.definicao{	
+}
+.figura{
+	background:#1a1a1a;
+		
+}
+
+
+.body{
+color:#fff;
+background-image:url("http://img.aws.ehowcdn.com/intl-620/ds-photo/getty/article/251/157/92837724.jpg");	
+}
+.elenco{
+
+padding:15px;
+position:relative;
+}
+.genero{
+	
+	padding:15px;
+	position:relative;
+}
+.genero_elenco{
+	clear;
+
+}
+.iclassificacao{
+	width:50px;
+	
+}
+.classificacao{
+	position: relative;
+	left:350px;
+	bottom:240px;
+
+}
+.logo ul{
+	top:-25px;
+	z-index:100;
+	width:90%;
+	height:47px;
+	border-radius: 0px 0px 25px 25px;
+	position:fixed;
+	font-size:1.7em;
+	background:#333333;
+`	font-family:Gill Sans Ultra Bold;
+    list-style:none;
+	
+}
+.logo ul li{
+ display: inline;	
+ margin-bottom:20px;
+}
+.icon{
+
+font-size:1.2em;
+margin-right:40px;
+margin-left:25px;
+}
+.logo_cefet{
+	margin:0;
+	font-family:Corleone;
+	
+}
+span{
+color:red;
+
+}
+table{
+padding: 15px;
+border: 1px solid #fff;	
+}
+tr{
+	border: 1px solid #fff;	
+}
+.comentarios{
+	padding:9px;
+	border-top: 4px solid #fff;
+	 border-top-style:groove;
+
+}
+.comentario{
+
+	border-bottom: 1px solid #fff;
+	color:red;
+}
+.estrela{
+	width:20px;
+	left:41%;
+	position:relative;
+}
+.estrelas{
+	position:relative;
+	right:20px;
+
+}
+.Simagens{
+	width:160px;
+	margin:10px;
+	border: 1px solid red;
+}
+.icon_pesquisar{
+background: #262626;
+
+font-size:0.7em;
+
+margin-left:50px;
+}

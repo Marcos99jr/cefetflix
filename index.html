@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/estilo.css" />
+	<script src="./js/filmes.js"></script>
+	<link type="text/css" rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css"/>
+	<script src="./js/jquery.min.js"></script>
+	<script>
+	
+	
+	
+	$(function(){ 
+	console.log(filmes);
+
+		
+		$.each(filmes,function(indice,filme){
+			var $ulGenero = $("<ul />")
+			var $ulElenco = $("<ul />")
+			var $classificacao = $("<div />")
+			var $numero_pessoas = $("<div />")
+			var $ulDescricao = $("<td />")
+			var $ulRating =  $("<div />")
+			var $numero_pessoa =  $("<td />")
+			var $titulo_semelhantes = $("<div />")
+		
+		
+			$.each(filme.titulosSemelhantes,function(i,obj){
+				$.each(filmes,function(indice,filme){
+					if(filme.id==obj){
+					$titulo_semelhantes.append($("<img />").attr("src",filme.figura).addClass("Simagens"))
+					}
+				});
+			});
+			
+		
+				
+			$.each(filme.generos,function(i,obj){
+				$ulGenero.append($("<li />").text(obj))
+			});
+			
+			$.each(filme.elenco,function(i,obj){
+				$ulElenco.append($("<li />").text(obj))
+			});
+			
+			$.each(filme.opinioes,function(i,obj){
+				
+				for(t=0;t<obj.rating/filme.opinioes.length;t++){
+				$ulRating.prepend('<img class ="estrela"src="./img/estrela.png" />')
+				
+				}
+				$numero_pessoa.append($("<div />").addClass("comentario").text(i))
+				.append($("<h />").append (obj.descricao))
+				.append($("<div />").append($ulRating))
+		
+			});
+			if(filme.classificacao==18){
+			$classificacao.prepend('<img class ="iclassificacao"src="./img/18.jpg" />')
+			}else if(filme.classificacao==16){
+			$classificacao.prepend('<img class ="iclassificacao"src="./img/16.jpg" />')
+			}else if(filme.classificacao==0){
+			$classificacao.prepend('<img class ="iclassificacao"src="./img/L.png" />')
+			}else if(filme.classificacao==12){
+			$classificacao.prepend('<img class ="iclassificacao"src="./img/12.png" />')
+			}else if(filme.classificacao==14){
+			$classificacao.prepend('<img class ="iclassificacao"src="./img/14.png" />')
+			}else if(filme.classificacao==10){
+			$classificacao.prepend('<img class ="iclassificacao"src="./img/10.png" />')
+			}
+			
+			$(".caixa")
+				.append(
+						$("<div />")
+							.addClass("filme")
+							.append($("<div />").addClass("titulo")
+								.text(filme.titulo)
+									)
+							.append($("<div />").addClass("figura").append($("<img />").attr("src",filme.figura)))
+							.append($ulRating).addClass("estrelas")
+							.append($("<div />").addClass("definicao")
+								
+										.append($("<div />").addClass("resumo").text(filme.resumo))
+										.append($("<div />").addClass("genero_elenco")
+										.append($("<div />").addClass("genero").text("Genero").append($ulGenero))
+										
+										.append($("<div />").addClass("elenco").text("Elenco").append($ulElenco))
+										.append($("<div />").addClass("classificacao").text("Classificação: ").append($classificacao))
+											)
+										
+										.append($("<div />").addClass("titulos_semelhantes").text("Titulos semelhantes").append($titulo_semelhantes))
+										.append($("<div />").addClass("comentarios").text("COMENTARIOS:")
+											
+												
+												.append($numero_pessoa)
+												.append($ulDescricao)
+												
+								
+											)
+								)
+					)
+		
+		});
+	});
+	
+
+	</script>
+	<style>
+	
+	</style>
+	<title>Site</title>
+	<meta charset="utf-8">
+	
+	
+</head>
+<body class="body">
+	<div class="logo">
+		<ul>
+		<li class="icon"><i class="fa fa-bars" aria-hidden="true"></i></li>
+		<li class="logo_cefet">CEFE<span>TIFLIX</span></li>
+		<li class="icon_pesquisar"><input type="text" value:"Pesquisa"></input> <i class="fa fa-search" aria-hidden="true"></i></li>
+		</ul>
+	</div>
+	<div class="caixa">	
+		
+	</div>
+	<div id="tentando">
+	Fale conosco: 2032131312
+	<div>
+	</body>
+</html>
